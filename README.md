@@ -48,7 +48,8 @@ docker exec -it \
 In your `molecule.yml`, add the following platform:
 ```yaml
 - name: ArchLinux
-  image: custom-arch
+  image: h33n0k/docker-arch-ansible:latest
+  pre_build_image: true
   command: /lib/systemd/systemd
   environment:
     container: docker
